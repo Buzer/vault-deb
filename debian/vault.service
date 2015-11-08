@@ -1,0 +1,11 @@
+[Unit]
+Description=Vault
+Documentation=https://github.com/hashicorp/vault
+Wants=network.target
+
+[Service]
+Type=simple
+User=vault
+ExecStart=/usr/bin/vault server -config /etc/vault.conf
+
+[Install]

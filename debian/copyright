@@ -1,21 +1,20 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: consul
-Source: http://www.consul.io
+Upstream-Name: vault
+Source: http://www.vaultproject.io
 
 Files: src/*
-Copyright: 2014 HashiCorp <hello@hashicorp.com>
+Copyright: 2015 HashiCorp <hello@hashicorp.com>
 License: MPL-2.0
  This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
  If a copy of the MPL was not distributed with this file, 
  You can obtain one at http://mozilla.org/MPL/2.0/.
 
 Files: debian/*
-Copyright: 2014 Andrea Bernardo Ciddio <bcandrea@gmail.com>
-License: GPL-2+
+Copyright: 2015 Eljas Alakulppi <buzer@buzer.net>
+License: GPL-2
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; either version 2 of the License.
  .
  This package is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of

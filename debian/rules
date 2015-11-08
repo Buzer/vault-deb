@@ -13,15 +13,14 @@ override_dh_auto_clean:
 	rm -rf usr etc
 
 override_dh_auto_build:
-	export GOPATH=$(CURDIR) && $(MAKE) -C src/github.com/hashicorp/consul
+	export GOPATH=$(CURDIR) && export GOBIN=/tmp && export PATH=/tmp:$(PATH) && $(MAKE) -C src/github.com/hashicorp/vault bootstrap; $(MAKE) -C src/github.com/hashicorp/vault dev
 
 override_dh_auto_install:
 	mkdir -p usr/bin
 	mkdir -p usr/share/consul
 	mkdir -p etc
-	cp -a bin/consul usr/bin
-	cp -a src/github.com/hashicorp/consul/ui/dist usr/share/consul/web-ui
-	cp -a debian/consul.d etc
+	cp -a bin/vault usr/bin
+	cp -a debian/vault.conf etc
 
 %:
 	dh $@ 

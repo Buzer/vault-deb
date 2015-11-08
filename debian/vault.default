@@ -1,0 +1,13 @@
+# This file can be used to change the arguments
+# passed to vault
+
+# The default value for GOMAXPROCS (# of CPUs) can be
+# overridden explicitly here.
+#export GOMAXPROCS=2
+
+CONFIG=/etc/vault.conf
+
+# Additional flags can be passed to vault. It is
+# however preferable to edit configuration file
+#CONSUL_FLAGS=
+
