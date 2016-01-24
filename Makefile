@@ -19,7 +19,7 @@
 BASE_DIR  = $(CURDIR)/pkg
 SRC_DIR   = $(BASE_DIR)/checkout/src/github.com/hashicorp/vault
 DISTRO   ?= $(shell lsb_release -sc)
-REVISION ?= 1~$(DISTRO)1~ppa1
+REVISION ?= 1~$(DISTRO)1~ppa3
 MODIFIER ?= 
 CHANGE   ?= "New upstream release."
 PBUILDER ?= cowbuilder
@@ -33,7 +33,7 @@ build: build_src
 	--buildresult buildresult
 
 build_src: prepare_src 
-	cd $(PKG_DIR) && debuild -S -sa
+	cd $(PKG_DIR) && debuild -S
 
 prepare_src: $(SRC_DIR) get_current_version create_upstream_tarball
 	rsync -qav --delete debian/ $(PKG_DIR)/debian

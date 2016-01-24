@@ -29,9 +29,12 @@ case "$1" in
 
   configure)
     USERNAME=vault
-    adduser --system $USERNAME
-    chown $USERNAME:$USERNAME /var/lib/vault
+    GROUP=vault
+    addgroup --system $GROUP
+    adduser --system --gid `getent group $GROUP | cut -d: -f3` $USERNAME
+    chown $USERNAME:$GROUP /var/lib/vault
     chmod 770 /var/lib/vault
+    setcap cap_ipc_lock=+ep /usr/bin/vault
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)

@@ -1,3 +1,15 @@
+vault (0.3.1-0~trusty~ppa3) trusty; urgency=medium
+
+  * Added CAP_IPC_LOCK for /usr/bin/vault
+
+ -- Eljas Alakulppi <eljas@mintvm>  Sun, 29 Nov 2015 11:49:25 +0200
+
+vault (0.3.1-0~trusty~ppa2) trusty; urgency=medium
+
+  * Fix missing group issue
+
+ -- Eljas Alakulppi <eljas@mintvm>  Sun, 29 Nov 2015 10:48:29 +0200
+
 vault (0.3.1-0~trusty~ppa1) precise; urgency=low
 
   * New upstream release.
