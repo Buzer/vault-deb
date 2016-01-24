@@ -33,7 +33,7 @@ build: build_src
 	--buildresult buildresult
 
 build_src: prepare_src 
-	cd $(PKG_DIR) && debuild -S
+	cd $(PKG_DIR) && debuild -S -sa
 
 prepare_src: $(SRC_DIR) get_current_version create_upstream_tarball
 	rsync -qav --delete debian/ $(PKG_DIR)/debian
