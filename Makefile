@@ -19,11 +19,11 @@
 BASE_DIR  = $(CURDIR)/pkg
 SRC_DIR   = $(BASE_DIR)/checkout/src/github.com/hashicorp/vault
 DISTRO   ?= $(shell lsb_release -sc)
-REVISION ?= 1~$(DISTRO)1~ppa3
+REVISION ?= 1~$(DISTRO)1~ppa1
 MODIFIER ?= 
 CHANGE   ?= "New upstream release."
 PBUILDER ?= cowbuilder
-PBUILDER_BASE ?= $$HOME/pbuilder/$(DISTRO)-base-with-golang-1.4.cow
+PBUILDER_BASE ?= $$HOME/pbuilder/$(DISTRO)-base-with-golang-1.5.cow
 PPA      ?= 
 
 build: build_src
@@ -55,7 +55,7 @@ create_upstream_tarball: get_new_version
 	fi
 
 $(SRC_DIR):
-	git clone https://github.com/hashicorp/vault.git $(SRC_DIR)
+	git clone https://github.com/Buzer/vault.git $(SRC_DIR)
 
 get_current_version:
 	$(eval CURRENT_VERSION = $(shell test -f debian/changelog && \

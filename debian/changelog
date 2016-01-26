@@ -1,3 +1,9 @@
+vault (0.4.1-awskms-0~trusty~ppa1) trusty; urgency=medium
+
+  * Added AWS KMS support
+
+ -- Eljas Alakulppi <buzer@buzer.net>  Sun, 24 Jan 2016 11:49:25 +0200
+
 vault (0.3.1-0~trusty~ppa3) trusty; urgency=medium
 
   * Added CAP_IPC_LOCK for /usr/bin/vault
